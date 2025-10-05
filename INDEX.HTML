@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shubham | Graphic Designer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #000000 80%, #660000);
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #ff1a1a;
+    }
+
+    header p {
+      color: #ff6666;
+      font-size: 1.2em;
+    }
+
+    section {
+      padding: 50px 20px;
+    }
+
+    .about {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+
+    .about h2 {
+      color: #ff3333;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 0;
+    }
+
+    .project-card {
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 15px;
+      overflow: hidden;
+      width: 280px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+
+    .project-card img:hover {
+      opacity: 1;
+    }
+
+    .project-card h3 {
+      padding: 15px;
+      font-size: 1.1em;
+      background: rgba(0, 0, 0, 0.9);
+      margin: 0;
+      color: #ffcccc;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.95);
+      font-size: 0.9em;
+      color: #ff6666;
+    }
+
+    /* Fullscreen Slider Modal */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+      transition: opacity 0.5s ease;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox .prev, .lightbox .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 0, 0, 0.6);
+      border: none;
+      color: white;
+      font-size: 2em;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+
+    .lightbox .prev:hover, .lightbox .next:hover {
+      background: rgba(255, 0, 0, 1);
+    }
+
+    .lightbox .prev {
+      left: 20px;
+    }
+
+    .lightbox .next {
+      right: 20px;
+    }
+
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2em;
+      color: #ff4444;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .lightbox .close:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shubham</h1>
+    <p>Graphic Designer at Tehnoglobe | Adobe Photoshop & Illustrator Expert</p>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m Shubham — a passionate Graphic Designer from Tehnoglobe. I specialize in Adobe Photoshop and Illustrator, creating stunning visuals and modern designs. I love blending creativity with precision to craft impactful designs that tell a story.</p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project-card"><img src="images/poster1.png" alt="Poster"><h3>Poster Design</h3></div>
+      <div class="project-card"><img src="images/logo1.png" alt="Logo"><h3>Logo Design</h3></div>
+      <div class="project-card"><img src="images/banner1.png" alt="Banner"><h3>Banner Design</h3></div>
+      <div class="project-card"><img src="images/businesscard1.png" alt="Card"><h3>Business Card</h3></div>
+      <div class="project-card"><img src="images/flyer1.png" alt="Flyer"><h3>Flyer Design</h3></div>
+      <div class="project-card"><img src="images/socialpost1.png" alt="Post"><h3>Social Media Post</h3></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Shubham | Designed with ❤️ using HTML, CSS & JS</p>
+  </footer>
+
+  <!-- Fullscreen Lightbox Slider -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <button class="prev" id="prevBtn">&#10094;</button>
+    <img id="lightboxImg" src="" alt="Expanded View">
+    <button class="next" id="nextBtn">&#10095;</button>
+  </div>
+
+  <script>
+    const images = Array.from(document.querySelectorAll('.project-card img'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('closeBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentIndex = 0;
+
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentIndex = index;
+        showImage();
+        lightbox.classList.add('active');
+      });
+    });
+
+    function showImage() {
+      lightboxImg.style.opacity = 0;
+      setTimeout(() => {
+        lightboxImg.src = images[currentIndex].src;
+        lightboxImg.onload = () => lightboxImg.style.opacity = 1;
+      }, 200);
+    }
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'ArrowRight') nextBtn.click();
+      if (e.key === 'ArrowLeft') prevBtn.click();
+      if (e.key === 'Escape') closeBtn.click();
+    });
+  </script>
+</body>
+</html>

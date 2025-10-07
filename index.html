@@ -4,22 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shubham | Graphic Designer</title>
-   <!-- 🔗 Link Preview (Open Graph & Twitter) -->
-  <meta property="og:title" content="Shubham | Graphic Designer">
-  <meta property="og:description" content="Creative graphic designer skilled in Photoshop, Illustrator, and branding design. Check out my work!">
-  <meta property="og:image:secure_url" content="https://shubham-portfolio-82od.onrender.com/preview.png?v=1">
-  <meta property="og:url" content="https://shubham-portfolio-82od.onrender.com">
-  <meta property="og:type" content="website">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <!-- For Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Shubham | Graphic Designer">
-  <meta name="twitter:description" content="Creative graphic designer skilled in Photoshop, Illustrator, and branding design.">
-  <meta name="twitter:image" content="https://shubham-portfolio-82od.onrender.com/preview.png">
-
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+  
   <style>
     body {
       margin: 0;
@@ -29,9 +18,27 @@
       text-align: center;
     }
     /* ... your rest of CSS here ... */
-  </style>
+  </style>S
 </head>
   <style>
+    .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.profile-pic {
+  width: 60px;            /* adjust size as you like */
+  height: 60px;
+  border-radius: 50%;      /* makes it round */
+  object-fit: cover;       /* keeps aspect ratio */
+  border: 2px solid #ff3333;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+    
+    
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -213,10 +220,15 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>SHUBHAM</h1>
-    <p>Graphic Designer at Tehnoglobe | Adobe Photoshop & Illustrator Expert</p>
-  </header>
+ <header>
+  <div class="header-container">
+    <img src="images/preview.png" alt="Shubham Photo" class="profile-pic">
+    <div>
+      <h1>Shubham</h1>
+      <p>Graphic Designer at Tehnoglobe | Adobe Photoshop & Illustrator Expert</p>
+    </div>
+  </div>
+</header>
 
   <section class="about">
     <h2>About Me</h2>
@@ -235,8 +247,8 @@
       <div class="project-card"><img src="images/banner1.png" alt="Banner"><h3>Banner Design</h3></div>
       <div class="project-card"><img src="images/businesscard1.png" alt="Card"><h3>ID Card design</h3></div>
       <div class="project-card"><img src="images/flyer1.png" alt="Flyer"><h3>Festival posters</h3></div>
-      <div class="project-card"><img src="images/socialpost1.png" alt="Post"><h3>branding</h3></div>
-      <div class="project-card"><img src="images/menu.png" alt="menu"><h3>menu design</h3></div>
+      <div class="project-card"><img src="images/socialpost1.png" alt="Post"><h3>Branding</h3></div>
+      <div class="project-card"><img src="images/menu.png" alt="menu"><h3>Menu design</h3></div>
     </div>
   </section>
   <section class="contact">

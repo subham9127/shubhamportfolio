@@ -87,6 +87,28 @@
       margin: 0;
       color: #ffcccc;
     }
+    .download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #b30000, #ff0000);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+  background: linear-gradient(135deg, #ff0000, #ff3333);
+}
+
 
     footer {
       margin-top: 50px;
@@ -172,7 +194,11 @@
   <section class="about">
     <h2>About Me</h2>
     <p>Hi, I’m Shubham — a passionate Graphic Designer from Tehnoglobe. I specialize in Adobe Photoshop and Illustrator, creating stunning visuals and modern designs. I love blending creativity with precision to craft impactful designs that tell a story.</p>
-  </section>
+      <a href="assets/shubham portfolio.pdf" download class="download-btn">
+    <i class="fa-solid fa-download"></i> Download Resume
+  </a>
+</section></section>
+  
 
   <section id="projects">
     <h2>My Projects</h2>

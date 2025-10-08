@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shubham | Graphic Designer</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-
+  
   <style>
     body {
       margin: 0;
@@ -267,7 +268,11 @@
       </a>
       <a href="https://wa.me/919166158395" target="_blank" style="text-decoration:none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
   <img src="images/whatsapp.jpg" alt="WhatsApp" width="60" height="60" style="border-radius: 12px; box-shadow: 0 0 10px rgba(0,255,0,0.6);">
-</a>
+      </a>
+          <circle cx="12" cy="12" r="11" fill="#25D366"/>
+          <path d="M12 3C7.03 3 3 7.03 3 12C3 13.72 3.49 15.32 4.35 16.67L3.08 20.5L7.04 19.25C8.34 20.03 9.85 20.5 11.5 20.5C16.47 20.5 20.5 16.47 20.5 11.5C20.5 6.53 16.47 2.5 11.5 2.5M12.05 4.5C15.64 4.5 18.55 7.41 18.55 11C18.55 14.59 15.64 17.5 12.05 17.5C10.89 17.5 9.79 17.19 8.84 16.65L8.56 16.5L6.45 17.03L6.99 15L6.82 14.7C6.21 13.71 5.87 12.55 5.87 11.31C5.87 7.72 8.46 4.5 12.05 4.5M9.09 8.5C8.96 8.5 8.74 8.55 8.56 8.76C8.38 8.97 7.88 9.44 7.88 10.39C7.88 11.34 8.59 12.26 8.68 12.39C8.77 12.52 9.94 14.36 11.76 15.17C13.27 15.84 13.58 15.72 13.92 15.68C14.26 15.64 15.05 15.2 15.22 14.74C15.39 14.28 15.39 13.89 15.34 13.81C15.29 13.73 15.16 13.68 14.97 13.59C14.78 13.5 13.83 13.03 13.66 12.97C13.49 12.91 13.36 12.88 13.23 13.07C13.1 13.26 12.73 13.68 12.62 13.81C12.51 13.94 12.4 13.96 12.21 13.87C12.02 13.78 11.42 13.58 10.71 12.95C10.16 12.46 9.77 11.85 9.66 11.66C9.55 11.47 9.65 11.36 9.74 11.27C9.82 11.19 9.92 11.06 10.01 10.95C10.1 10.84 10.13 10.76 10.19 10.63C10.25 10.5 10.22 10.39 10.17 10.3C10.12 10.21 9.74 9.26 9.58 8.87C9.42 8.5 9.26 8.55 9.14 8.54C9.03 8.53 8.9 8.5 8.77 8.5" fill="white"/>
+        </svg>
+      </a>
     </div>
   </section>
   <footer>
@@ -300,7 +305,14 @@
       });
     });
 
-    
+    function showImage() {
+      lightboxImg.style.opacity = 0;
+      setTimeout(() => {
+        lightboxImg.src = images[currentIndex].src;
+        lightboxImg.onload = () => lightboxImg.style.opacity = 1;
+      }, 200);
+    }
+
     closeBtn.addEventListener('click', () => {
       lightbox.classList.remove('active');
     });
